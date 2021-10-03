@@ -7,7 +7,7 @@
     <title>Pokemons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="icon" href="http://picsum.photos/50" type="image/png">
+    <link rel="icon" href="./img/pokemon.png" type="image/png">
 </head>
 <body>
 
@@ -30,11 +30,13 @@
         <form class="form ">
             <div class="container form-container">
                 <select class="form__input form__type">
+                    <option selected disabled value="all">Sort type</option>
                     <option value="all">All</option>
                 </select>
                 <input class="form__input form__search" type="text" placeholder="search">
                 <img class="form__search-icon" src="./img/search.svg" alt="search" width="24" height="24">
                 <select class="form__input form__sort">
+                    <option selected disabled value="all">Sort a_z</option>
                     <option value="all">All</option>
                     <option value="a_z">Aa_Zz</option>
                     <option value="z_a">Zz_Aa</option>
@@ -50,7 +52,7 @@
         </section>
     </main>
 
-    <div class="modal ">
+    <div class="modal" dataset-id="1">
         <div class="modal__content">
 
            <img class="modal__close" src="./img/arrow-ios-left.svg" width="40" height="40" alt="arrow">

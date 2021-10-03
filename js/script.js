@@ -52,7 +52,6 @@ function renderPokemons(arr, element){
             let findPokemon = pokemons.find((pokemon) => pokemon.id == itemId)
             let findIndex = result.findIndex((pokemon) => pokemon.id == itemId)
             
-            // if(e.target.checked){
                 if(!result.includes(findPokemon)){
                     result.push(findPokemon)
                     heartBtn.classList.add('fas')
@@ -62,10 +61,6 @@ function renderPokemons(arr, element){
                     heartBtn.classList.remove('fas')
                     heartBtn.style.color = '#000'
                 }
-
-            // }
-
-            
             
             function renderModalPokemons(arr, element){
                 element.innerHTML = null;
@@ -97,8 +92,6 @@ function renderPokemons(arr, element){
                             heartBtn.style.color = '#000'
                         }
                         
-
-
                         result.splice(findIndex, 1)
 
                         renderModalPokemons(result, elModalList)
@@ -110,14 +103,9 @@ function renderPokemons(arr, element){
             renderModalPokemons(result, elModalList)
         })
         
-        
         element.appendChild(cloneTemplate)
     })
 }
-
-
-
-
 
 renderPokemons(pokemons, elList)
 
@@ -159,13 +147,16 @@ elForm.addEventListener('submit', (event) =>{
     let filteredPokemons = pokemons.filter((pokemon) => pokemon.name.match(regex))
     
     let foundPokemons = []
+
+    console.log(filteredPokemons)
+
     
     if(elTypeValue == 'all'){
         foundPokemons = filteredPokemons
     }else{
         foundPokemons = filteredPokemons.filter((pokemon) => pokemon.type.includes(elTypeValue))
     }
-    
+
     const sortAlph = foundPokemons.sort((a, b) =>{
         if(a.name > b.name){
             return 1
@@ -176,13 +167,18 @@ elForm.addEventListener('submit', (event) =>{
         }
     })
     
-    if(elSortValue == 'all'){
-        foundPokemons = filteredPokemons
-    }else if(elSortValue == 'a_z'){
-        sortAlph
-    }else if(elSortValue == 'z_a'){
-        sortAlph.reverse()
+    if(elSortValue === 'all'){
+        foundPokemons = filteredPokemons 
+    }else if(elSortValue === 'a_z'){
+        foundPokemons = sortAlph
+    }else if(elSortValue === 'z_a'){
+        foundPokemons = sortAlph.reverse()
     }
+    console.log(foundPokemons)
+
+    
+    
+   
     
     renderPokemons(foundPokemons, elList)
 })
