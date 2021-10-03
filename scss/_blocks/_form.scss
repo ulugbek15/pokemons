@@ -1,0 +1,48 @@
+.form{
+    &__input{
+        font-weight: bold;
+        font-size: 24px;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 15px; 
+        outline: none;
+        appearance: none;
+        margin-right: 35px;
+        &:last-child{
+            margin-right: 0;
+        }
+       
+    }
+    &__type{
+        width: 260px;
+        padding: 16px 81px;
+    }
+    &__search{
+        width: 300px;
+        padding: 16px 29px;
+        &::placeholder{
+            font-weight: bold;
+            color: #000;
+            text-transform: capitalize;
+        }
+        &-icon{
+            position: absolute;
+            transform: translateX(-88px) translateY(19px);
+        }
+    }
+    &__sort{
+        width: 260px;
+        padding: 16px 80px;
+    }
+    &__btn{
+        width: 200px;
+        padding: 16px 64px;
+    }
+}
+.main{
+    margin-top: 70px;
+}
+.form-container{
+    width: 1159px;
+    margin: 0 auto;
+}

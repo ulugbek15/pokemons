@@ -1,0 +1,30 @@
+
+.header{
+    margin-top: 50px;
+    &__wrpper{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__heart-btn{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        transform: translateX(304px);
+        cursor: pointer;
+    }
+}
+.count{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    top: 57%;
+    right: 2px;
+}

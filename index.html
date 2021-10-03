@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="http://picsum.photos/50" type="image/png">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrpper">
+                <a href="#" class="header__logo-link">
+                    <img class="header__logo" src="./img/pokemon_emblem_logo.png" alt="logo" width="610" height="225">
+                </a>
+                <button class="header__heart-btn">
+                    <img class="header__heart-img" src="./img/heart.svg" alt="heart" width="50" height="50">
+                    <span class="count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <ul id="list"></ul>
+
+    <main class="main">
+        <form class="form ">
+            <div class="container form-container">
+                <select class="form__input form__type">
+                    <option value="all">All</option>
+                </select>
+                <input class="form__input form__search" type="text" placeholder="search">
+                <img class="form__search-icon" src="./img/search.svg" alt="search" width="24" height="24">
+                <select class="form__input form__sort">
+                    <option value="all">All</option>
+                    <option value="a_z">Aa_Zz</option>
+                    <option value="z_a">Zz_Aa</option>
+                </select>
+                <button class="form__input form__btn">Button</button>
+            </div>
+        </form>
+
+        <section class="cards">
+            <div class="container">
+                <ul class="cards__wrapper"></ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal ">
+        <div class="modal__content">
+
+           <img class="modal__close" src="./img/arrow-ios-left.svg" width="40" height="40" alt="arrow">
+           <ul id="modal__list"></ul>
+        </div>
+    </div>
+
+    <template id="template">
+        <li class="cards__item">
+            <img class="cards__img" src="http://picsum.photos/157" alt="pokemon" width="157" height="157">
+            <hr class="cards__hr">
+            <div class="cards__bottom-wrapper">
+                <h3 class="cards__title">Pokemons</h3>
+                <i class="far fa-heart cards__heart fa-2x" width="30" height="30"></i>
+            <p class="cards__genre">Grass, Poison</p>
+            <span class="cards__weight">6.9 kg</span>
+            <span class="cards__age">99 age</span>
+            </div>
+        </li>
+    </template>
+    
+
+
+    <script src="./js/pokemons.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

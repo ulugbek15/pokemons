@@ -1,0 +1,55 @@
+.cards{
+    margin-top: 96px;
+    &__item{
+        margin-right: 30px;
+        margin-bottom: 30px;
+        width: 297px;
+        height: 423px;
+        border: 2px solid #000;
+        border-radius: 20px;
+        background-color: #fff;
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+    }
+    &__bottom-wrapper{
+        position: relative;
+        padding: 20px 30px 37px 30px;
+    }
+    &__hr{
+        border: none;
+        height: 2px;
+        background-color: #000;
+    }
+    &__img{
+        margin: 30px 75px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &__genre{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        margin: 5px 0 35px 0;
+    }
+    &__weight, &__age{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        margin-right: 10px;
+    }
+    &__heart{
+        position: absolute;
+        right: 30px;
+        top: 21px;
+        cursor: pointer;
+    }
+}
+
+.cards__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
